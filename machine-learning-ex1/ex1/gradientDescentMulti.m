@@ -18,7 +18,8 @@ for iter = 1:num_iters
     %
 
 
-
+    h = sum((theta' .* X),2);
+    theta = theta - (alpha * (sum((h - y) .* X) / m))';
 
 
 
